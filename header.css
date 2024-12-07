@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* Header Styling */
+header {
+  background-color: rgb(87, 65, 65); /* Black background */
+  padding: 1rem;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  transition: var(--transition-timeout);
+}
+
+.bloggithead {
+  display: none;
+}
+li {
+  margin: 0;
+}
+a {
+  font-size: var(--header-font-size);
+}
+/* Nav and List Styling */
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+nav ul li {
+  color: white;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+nav ul li a {
+  color: white;
+}
+/* Mobile Menu */
+.hamburger {
+  display: none;
+  font-size: 25px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive Styling */
+@media (max-width: 700px) {
+  /* Hide navigation items initially */
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: rgb(87, 65, 65);
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 10px 0;
+    z-index: 10;
+  }
+
+  .bloggithead {
+    color: #e6e5e5fd;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.5rem;
+    display: grid;
+    justify-content: center;
+    margin-top: -28px;
+    text-transform: uppercase;
+  }
+  /* Show the hamburger menu */
+  .hamburger {
+    display: inline;
+  }
+
+  /* Show navigation when active */
+  nav ul.active {
+    display: flex;
+    animation: smoothShow 0.5s linear both;
+  }
+}
+
+@keyframes smoothShow {
+  from {
+    scale: 1.1;
+    top: 0;
+    transform: skewX(10deg);
+  }
+  to {
+    scale: 1;
+    padding-bottom: 30px;
+  }
+}
