@@ -14,7 +14,6 @@ const allPostsData = {
 
 export function getRelatedPosts(name) {
   // const related = allPostsData[name].slice(1, 6);
-  console.log(name);
   const related = new Set();
 
   while (related.size < 5) {
