@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact us - Bloggit</title>
+    <link rel="stylesheet" href="general.css" />
+    <link rel="stylesheet" href="header.css" />
+    <!-- <link rel="stylesheet" href="utils.css" /> -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="favicon-96x96.png"
+      favicon-96x96.png
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Bloggit" />
+    <link rel="manifest" href="site.webmanifest" />
+
+    <style>
+      .contact-page {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .contact-header {
+        text-align: center;
+      }
+
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .contact-form label {
+        margin-top: 10px;
+        font-weight: bold;
+      }
+
+      .contact-form input,
+      .contact-form textarea,
+      .contact-form button {
+        padding: 10px;
+        margin-top: 5px;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .contact-form button {
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: var(--transition-timeout);
+      }
+
+      .contact-form button:hover {
+        background-color: #4caf50;
+      }
+
+      .contact-info {
+        margin-top: 20px;
+      }
+
+      .contact-info a {
+        color: #4caf50;
+        text-decoration: none;
+      }
+
+      .contact-info a:hover {
+        text-decoration: underline;
+      }
+    </style>
+    <link rel="stylesheet" href="allpostGeneral.css" />
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "C4t-0HNbjibt0kxSd"
+        });
+      })();
+    </script>
+
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7362055154982722"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-WJLNK6DHET"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-WJLNK6DHET");
+  </script>
+
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {},
+      Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"),
+        s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = "https://embed.tawk.to/672c9be84304e3196adeb59b/1ic369eee";
+      s1.charset = "UTF-8";
+      s1.setAttribute("crossorigin", "*");
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
+  <!--End of Tawk.to Script-->
+  <header class="header">
+    <nav>
+      <span class="hamburger" >☰</span>
+      <span class="bloggithead">Bloggit</span>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="techblogs.html">Tech</a></li>
+        <li><a href="programming.html">Programming</a></li>
+        <li><a href="heathblog.html">Health</a></li>
+        <li><a href="foodblog.html">Food</a></li>
+        <li><a href="gamingblog.html">Gaming</a></li>
+      </ul>
+    </nav>
+  </header>
+  <body>
+    <main class="contact-page">
+      <section>
+        <section class="contact-header">
+          <h1>Contact Us</h1>
+          <p>
+            Have questions, suggestions, or just want to say hello? We’d love to
+            hear from you!
+          </p>
+        </section>
+
+        <section class="contact-form-section">
+          <form action="" method="POST" class="contact-form">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="Your name"
+            />
+            <label for="subject">Subject</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              required
+              placeholder="Topic"
+            />
+
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="Your email address"
+            />
+
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              required
+              placeholder="Write your message here"
+            ></textarea>
+
+            <button onclick="sendEmail(event);" type="submit">
+              Send Message
+            </button>
+          </form>
+        </section>
+
+        <section class="contact-info">
+          <h2>Other Ways to Reach Us</h2>
+          <p>
+            Email: <a href="mailto:bloggit01@gmail.com">bloggit01@gmail.com</a>
+          </p>
+          <p>
+            Social Media:
+            <a href="https://www.facebook.com/p/bloggit-61568425943202/"
+              >Facebook</a
+            >
+            |
+            <a href="https://x.com/bloggit?t=FxZcKVg-MgWdDuoiSuTpQg&s=08"
+              >Twitter</a
+            >
+            |
+            <a
+              href="https://www.instagram.com/bloggit01/profilecard/?igsh=MXNpN3hiZ29ibHNhMw=="
+              >Instagram</a
+            >
+          </p>
+        </section>
+      </section>
+
+      <section class="right-nav"></section>
+    </main>
+
+    <footer class="section-magin-top js-footer"></footer>
+
+    <script type="module" src="right-nav.js"></script>
+
+    <script type="module" src="header.js"></script>
+    <script type="module" src="footer.js"></script>
+
+    <script>
+      function sendEmail(event) {
+        event.preventDefault(); // Prevents the default form submission
+        let params = {
+          name: document.getElementById("name").value,
+          email: document.getElementById("email").value,
+          subject: document.getElementById("subject").value,
+          message: document.getElementById("message").value
+        };
+
+        const allParam = [
+          params.name,
+          params.email,
+          params.subject,
+          params.message
+        ].filter((input) => {
+          if (input) {
+            return input;
+          }
+        });
+        emailjs
+          .send("service_lfbs0sj", "template_y4jtlda", params)
+          .then(() => {
+            if (!params.email.includes("@")) {
+              alert('Email address should contain "@" symbol');
+            } else if (allParam.length === 4) {
+              alert("Email has been sent");
+            } else {
+              alert("Please fill all the required fields");
+            }
+          })
+          .catch((error) => console.error("Email send failed:", error));
+      }
+    </script>
+  </body>
+</html>

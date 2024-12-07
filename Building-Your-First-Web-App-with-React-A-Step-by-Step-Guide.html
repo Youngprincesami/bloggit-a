@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bloggit</title>
+
+    <link rel="stylesheet" href="general.css" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="utils.css" />
+
+    <link rel="stylesheet" href="allpostGeneral.css" />
+
+    <style>
+      code{
+        display: block;
+        width: 100vw;
+        overflow-x: auto;
+        word-wrap: normal;
+        background-color: rgb(222, 222, 222);
+        white-space: pre;
+      }
+    </style>
+
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Bloggit" />
+    <link rel="manifest" href="site.webmanifest" />
+
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9200001067122363"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {},
+      Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"),
+        s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = "https://embed.tawk.to/672c9be84304e3196adeb59b/1ic369eee";
+      s1.charset = "UTF-8";
+      s1.setAttribute("crossorigin", "*");
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
+  <!--End of Tawk.to Script-->
+  <header class="header">
+    <nav>
+      <span class="hamburger">☰</span>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="techblogs.html">Tech</a></li>
+        <li><a href="programming.html">Programming</a></li>
+        <li><a href="heathblog.html">Health</a></li>
+        <li><a href="foodblog.html">Food</a></li>
+        <li><a href="gamingblog.html">Gaming</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <body>
+    <main>
+      <article class="general-border article">
+        <h1>
+          Building Your First Web App with React: A Complete Step-by-Step Guide
+        </h1>
+
+        <p>
+          React has become one of the most widely used JavaScript libraries for
+          building interactive user interfaces, particularly for single-page
+          applications (SPAs). React’s component-based architecture makes it
+          easy to build scalable, reusable UI components. If you're just
+          starting with React, this step-by-step guide will walk you through the
+          entire process of creating your first web app. By the end, you'll have
+          a solid foundation in React and be ready to build more complex
+          applications. Let’s get started!
+        </p>
+
+        <br />
+        <hr />
+
+        <h2>1. What is React?</h2>
+        <p>
+          React is a powerful JavaScript library developed by Facebook to build
+          user interfaces. It allows developers to create dynamic, interactive
+          UIs by composing reusable components. These components can manage
+          their own state and can be efficiently rendered as needed, thanks to
+          the Virtual DOM. Some key features of React include:
+        </p>
+        <ul>
+          <li>
+            <strong>Component-Based:</strong> Build independent, reusable
+            components that manage their own state.
+          </li>
+          <li>
+            <strong>Virtual DOM:</strong> React uses a virtual representation of
+            the DOM, making updates more efficient and improving application
+            performance.
+          </li>
+          <li>
+            <strong>Unidirectional Data Flow:</strong> React enforces a single
+            direction of data flow, simplifying debugging and making the
+            application state easier to manage.
+          </li>
+        </ul>
+
+        <h2>2. Prerequisites</h2>
+        <p>
+          Before diving into React, make sure you have the following tools and
+          software installed:
+        </p>
+        <ul>
+          <li>
+            <strong>Node.js:</strong> Download the latest version from
+            <a href="https://nodejs.org/">nodejs.org</a>.
+          </li>
+          <li>
+            <strong>NPM (Node Package Manager):</strong> NPM comes bundled with
+            Node.js and is used to manage project dependencies and libraries.
+          </li>
+        </ul>
+        <p>
+          Once you have Node.js and NPM installed, you're ready to start
+          building with React!
+        </p>
+
+        <h2>3. Setting Up Your React Project</h2>
+        <p>
+          React has a handy tool called Create React App that sets up everything
+          you need to get started. It's a simple way to create a new React
+          project with a ready-made configuration. Follow these steps to create
+          your React app:
+        </p>
+        <ol>
+          <li>
+            Open your terminal or command prompt and run the following command
+            to create a new React app:
+            <pre><code>npx create-react-app my-first-app</code></pre>
+            This command generates a new directory called
+            <code>my-first-app</code> with all the necessary files and
+            dependencies.
+          </li>
+          <li>
+            After the app is created, navigate into your project directory:
+            <pre><code>cd my-first-app</code></pre>
+          </li>
+          <li>
+            To start the development server and view your app, run:
+            <pre><code>npm start</code></pre>
+            This will open your app at <code>http://localhost:3000</code> in
+            your web browser.
+          </li>
+        </ol>
+
+        <h2>4. Understanding the Project Structure</h2>
+        <p>
+          Your newly created React app comes with a predefined project
+          structure. Let’s break down the main folders and files you’ll be
+          working with:
+        </p>
+        <ul>
+          <li>
+            <strong>public/:</strong> This folder contains static files,
+            including <code>index.html</code>, which is the root HTML file for
+            your app.
+          </li>
+          <li>
+            <strong>src/:</strong> This is where your React components, CSS, and
+            JavaScript files will live. All your app's core logic and UI
+            components go here.
+          </li>
+          <li>
+            <strong>package.json:</strong> This file manages your project's
+            dependencies, scripts, and metadata. It’s where you'll add external
+            libraries.
+          </li>
+        </ul>
+
+        <h2>5. Building Your First Component</h2>
+        <p>
+          Now let’s create our first React component! Open the
+          <code>src/App.js</code> file, and replace its contents with the
+          following code:
+        </p>
+        <pre><code class="react-app-1">
+      
+        </code></pre>
+        <p>
+          After saving the changes, refresh your browser, and you should see the
+          updated message on your app’s homepage.
+        </p>
+
+        <h2>6. Adding Interactivity with State</h2>
+        <p>
+          React apps come to life when they react to user interactions. Let’s
+          add a button that changes text when clicked. To do this, we need to
+          use React’s state management feature. Update your
+          <code>App.js</code> file to the following:
+        </p>
+        <pre><code class="react-app">
+          
+        </code></pre>
+        <p>
+          Now, when you click the button, the text will change! This
+          demonstrates how React allows you to manage the state of your app and
+          handle user interactions.
+        </p>
+
+        <h2>7. Next Steps and Resources</h2>
+        <p>
+          Congratulations on building your first React app! Now that you've
+          grasped the basics, here are some resources to help you continue your
+          React journey:
+        </p>
+        <ul>
+          <li>
+            <strong>React Documentation:</strong> The official React
+            documentation is an invaluable resource for learning more about
+            React concepts. Visit
+            <a href="https://reactjs.org/docs/getting-started.html"
+              >reactjs.org</a
+            >.
+          </li>
+          <li>
+            <strong>Online Courses:</strong> Platforms like Udemy and Coursera
+            offer excellent React tutorials and courses.
+          </li>
+          <li>
+            <strong>Build Projects:</strong> The best way to learn React is by
+            building more complex apps. Try building a to-do list, a weather
+            app, or even a simple blog to reinforce your knowledge.
+          </li>
+        </ul>
+
+        <h4>Conclusion: Building with React</h4>
+        <p>
+          React is an incredible tool for building dynamic, modern web
+          applications. By following this guide, you've built a basic React app
+          and learned about components, state management, and handling user
+          input. As you continue exploring React, you’ll unlock its full
+          potential and start building powerful, scalable applications. Keep
+          practicing, and enjoy the journey of learning React. Happy coding!
+        </p>
+      </article>
+
+      <section class="right-nav"></section>
+
+      <!-- related posts -->
+      <section class="general-border related-posts" data-related-post-id="programming">
+        <h2>Related Posts</h2>
+        <div class="blog-post-wrapper-card"></div>
+      </section>
+    </main>
+
+    <footer class="section-magin-top js-footer"></footer>
+
+    <script defer type="module" src="post.js"></script>
+    <script>
+      let codeElemt = document.querySelector('.react-app');
+      codeElemt.innerText = `
+  import React, { useState } from 'react';
+      
+  function App() {
+    const [message, setMessage] = useState('Welcome to My First React App!');
+
+    const handleClick = () => {
+        setMessage('You clicked the button!');
+    };
+    return (
+        <div>
+          <h1>{message}</h1>
+          <button onClick={handleClick}>Click Me</button>
+        </div>
+    );
+  }
+  export default App;
+      `
+      document.querySelector('.react-app-1').textContent = `
+  import React from 'react';
+
+  function App() {
+    return (
+        <div>
+            <h1>Welcome to My First React App!</h1>
+            <p>This is my first component in React.</p>
+        </div>
+    );
+  }
+
+  export default App;
+      `;
+    </script>
+  </body>
+</html>
