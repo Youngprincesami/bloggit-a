@@ -14,6 +14,7 @@ const allPostsData = {
 
 export function getRelatedPosts(name) {
   // const related = allPostsData[name].slice(1, 6);
+  console.log(name);
   const related = new Set();
 
   while (related.size < 5) {
@@ -32,7 +33,7 @@ export function getRelatedPosts(name) {
                     <img
                   src="${data.img}"
                   class="post-img-cont__img"
-                  alt="${data.title}"
+                  alt="${data.title}" width="150" height="150"
                 />
                 </a>
               </div>

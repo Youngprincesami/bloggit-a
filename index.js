@@ -12,7 +12,7 @@ export function renderPosts(cardData) {
               <img
                 src="${data.img}"
                 class="post-img-cont__img"
-                alt="${data.title}"
+                alt="${data.title}" width="150" height="150"
               />
             </a>
             </div>
